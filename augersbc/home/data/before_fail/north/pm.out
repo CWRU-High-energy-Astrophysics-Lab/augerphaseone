@@ -1,0 +1,104 @@
+***** PM Started
+***** PM Connected to CS
+***** CS Connected to LSC 'localhost'
+
+>>>> Id: 103 - 2016/08/17 22:06:12 - Msg Type 0 [M_READY] (33 bytes)
+Run Status: 0, Poweron_reset: 6, SW Version: 14022201, Config Version: 1
+Northing: 4351487, Easting: 335419, Height: 139300
+Cur GPS Seconds: 1155506788, UTC Time: 2016/08/17 22:06:11. Offset: 17
+<<<< T3Request:  T3Evid = 4, T3Seconds=1155506819, T3Micros= 913574
+Pkt sent to CS, 42 bytes, payload: 24 bytes - 2016/08/17 22:06:44
+
+>>>> Id: 103 - 2016/08/17 22:06:59 - Msg Type 6 [M_T3_EVT] (2713 bytes)
+   EvtId: 4, Error 0 - No Error
+Save 't3_00004.bz2', size: 2704
+
+>>>> Id: 103 - 2016/08/17 22:10:50 - Msg Type 10 [M_MONIT_SEND] (413 bytes)
+GPS Seconds: 1155507064 (offset: 17), UTC Date: 2016/08/17 22:10:47, Count: 60
+        FE-1: 0.000 (0.000 0.000)
+        FE-2: 0.000 (0.000 0.000)
+        FE-3: 0.000 (0.000 0.000)
+        FE-4: 0.000 (0.000 0.000)
+      V-BATT: 13.405 (13.336 13.424)
+    V-FE-12V: 13.342 (13.283 13.363)
+ V-Fpga-1.2V: 1.213 (1.211 1.221)
+  V-VCC-3.3V: 3.289 (3.288 3.290)
+ V-CORE-1.8V: 1.804 (1.796 1.807)
+    I-FE-12V: 0.059 (0.013 0.125)
+       I-VCC: 0.257 (0.077 0.594)
+      I-BATT: 0.379 (0.293 0.532)
+        V-5V: 4.973 (4.972 4.974)
+       LSC-T: 64.5 (64.2 64.7)
+       LSC-H: 27.6 (27.5 27.7)
+TPCB Load Voltage: 13.9 V, Current: 480 mA
+TPCB Panel Voltage: 14.6 V, Current: 840 mA
+TPCB Pressure: 857.5 hPa, Temperature: 36.7 C
+CGD-V0: 0 [0], CGD-V1: 33000 [80e8], 
+CGD-V2: 34000 [84d0], CGD-V3: 35000 [88b8], 
+CGD-V4: 36000 [8ca0], CGD-V5: 37000 [9088], 
+CGD-V6: 33000 [80e8], CGD-V7: 34000 [84d0], 
+CGD-V8: 35000 [88b8], CGD-T: 123000 [1e078], 
+-na: 0 [0], -na: 0 [0], 
+CAN-BAD-ID: 34 [22], CAN-BAD-UP-DATA: 36 [24], 
+CAN-BAD-DOWN-DATA: 37 [25], CAN-BAD-UP-MON: 38 [26], 
+CAN-BAD-DOWN-MON: 39 [27], CAN-BUF-LS: 35 [23], 
+CAN-BUF-TPCB: 36 [24], CAN-BUF-UP: 37 [25], 
+CAN-BUF-DOWN-HI: 38 [26], CAN-BUF-DOWN-LO: 39 [27], 
+-na: 0 [0], BUF-CSMA: 36 [24], 
+BUF-DOWN-DEF: 39 [27], BUF-DOWN-MIC: 40 [28], 
+BUF-DOWN-LO: 41 [29], BUF-DOWN-GHOST: 37 [25], 
+BUF-DOWN-ACK: 38 [26], -na: 39 [27], 
+BUF-UP-DEF: 40 [28], BUF-UP-MIC: 41 [29], 
+BUF-UP-LO: 42 [2a], BUF-UP-GHOST: 38 [26], 
+BUF-UP-ACK: 39 [27], RSSI-T-CS1: 40 [28], 
+RSSI-T-CS2: 1211 [4bb], RSSI-F-CS1: 3288 [cd8], 
+RSSI-F-CS2: 41 [29], -na: 0 [0], 
+-na: 0 [0], RSSI-L-CS1: 39 [27], 
+RSSI-L-CS2: 40 [28], RSSI-R-CS1: 41 [29], 
+RSSI-R-CS2: 42 [2a], -na: 0 [0], 
+-na: 0 [0], 
+
+>>>> Id: 103 - 2016/08/17 22:15:49 - Msg Type 10 [M_MONIT_SEND] (413 bytes)
+GPS Seconds: 1155507364 (offset: 17), UTC Date: 2016/08/17 22:15:47, Count: 60
+        FE-1: 0.000 (0.000 0.000)
+        FE-2: 0.000 (0.000 0.000)
+        FE-3: 0.000 (0.000 0.000)
+        FE-4: 0.000 (0.000 0.000)
+      V-BATT: 13.441 (13.417 13.457)
+    V-FE-12V: 13.377 (13.357 13.397)
+ V-Fpga-1.2V: 1.213 (1.211 1.221)
+  V-VCC-3.3V: 3.289 (3.288 3.290)
+ V-CORE-1.8V: 1.802 (1.796 1.806)
+    I-FE-12V: 0.059 (0.018 0.166)
+       I-VCC: 0.275 (0.109 0.584)
+      I-BATT: 0.384 (0.306 0.442)
+        V-5V: 4.973 (4.972 4.974)
+       LSC-T: 64.0 (63.7 64.2)
+       LSC-H: 27.4 (27.4 27.5)
+TPCB Load Voltage: 13.9 V, Current: 486 mA
+TPCB Panel Voltage: 15.9 V, Current: 725 mA
+TPCB Pressure: 857.6 hPa, Temperature: 36.2 C
+CGD-V0: 0 [0], CGD-V1: 65000 [fde8], 
+CGD-V2: 66000 [101d0], CGD-V3: 67000 [105b8], 
+CGD-V4: 68000 [109a0], CGD-V5: 69000 [10d88], 
+CGD-V6: 65000 [fde8], CGD-V7: 66000 [101d0], 
+CGD-V8: 67000 [105b8], CGD-T: 123000 [1e078], 
+-na: 0 [0], -na: 0 [0], 
+CAN-BAD-ID: 66 [42], CAN-BAD-UP-DATA: 68 [44], 
+CAN-BAD-DOWN-DATA: 69 [45], CAN-BAD-UP-MON: 70 [46], 
+CAN-BAD-DOWN-MON: 71 [47], CAN-BUF-LS: 67 [43], 
+CAN-BUF-TPCB: 68 [44], CAN-BUF-UP: 69 [45], 
+CAN-BUF-DOWN-HI: 70 [46], CAN-BUF-DOWN-LO: 71 [47], 
+-na: 0 [0], BUF-CSMA: 68 [44], 
+BUF-DOWN-DEF: 69 [45], BUF-DOWN-MIC: 70 [46], 
+BUF-DOWN-LO: 71 [47], BUF-DOWN-GHOST: 72 [48], 
+BUF-DOWN-ACK: 73 [49], -na: 69 [45], 
+BUF-UP-DEF: 70 [46], BUF-UP-MIC: 71 [47], 
+BUF-UP-LO: 72 [48], BUF-UP-GHOST: 73 [49], 
+BUF-UP-ACK: 74 [4a], RSSI-T-CS1: 70 [46], 
+RSSI-T-CS2: 71 [47], RSSI-F-CS1: 72 [48], 
+RSSI-F-CS2: 73 [49], -na: 0 [0], 
+-na: 0 [0], RSSI-L-CS1: 71 [47], 
+RSSI-L-CS2: 72 [48], RSSI-R-CS1: 73 [49], 
+RSSI-R-CS2: 74 [4a], -na: 0 [0], 
+-na: 0 [0], 

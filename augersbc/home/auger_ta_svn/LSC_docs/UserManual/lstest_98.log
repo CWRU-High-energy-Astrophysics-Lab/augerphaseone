@@ -1,0 +1,49 @@
+
+++++++ LsTest - Cpu Number: 98 - Fri Sep 16 08:49:24 UTC 2011
+
+>>>> Test TPCB and CAN (may last 1 minute)
+Start Fri Sep 16 08:49:24 2011
+  ==== TPCB and CANBUS OK ====
+>>>> Test TTAG (about 10 seconds)
+TTAG ID: 54545646 - Version: F
+  ==== TTAG OK ==== 
+>>>> Test GPS Receiver (about 1 minute)
+  ==== GPS Receiver OK ==== 
+>>>> Test 1PPS Irq (about 10 seconds)
+  ==== 1PPS IRQ OK ==== 
+>>>> Test FE Trigger
+Front End Board Absent
+  **** NO Front End Board **** 
+Courty FPGA, use Soft Trigger
+Ttag ID: 0x54545646
+Nb Events: 100, Nb IRQ: 100
+Cleanup
+  ==== FE FPGA OK ====
+>>>> Test ADC
+
+Averages over 10 read
+        FE-1 - 0.000 < 0.000 < 0.000
+        FE-2 - 0.000 < 0.000 < 0.000
+        FE-3 - 0.000 < 0.000 < 0.000
+        FE-4 - 0.000 < 0.000 < 0.000
+      V-BATT - 12.041 < 12.042 < 12.048
+    V-FE-12V - 12.041 < 12.045 < 12.048
+ V-Fpga-1.2V - 1.200 < 1.201 < 1.201
+  V-VCC-3.3V - 3.269 < 3.270 < 3.271
+ V-CORE-1.8V - 1.786 < 1.797 < 1.802
+    I-FE-12V - 0.004 < 0.013 < 0.033
+       I-VCC - 0.098 < 0.329 < 0.584
+      I-BATT - 0.207 < 0.318 < 0.478
+        V-5V - 4.987 < 4.987 < 4.988
+  ==== ADC OK ==== 
+>>> Test DACs 
+  ==== DAC OK ==== 
+>>> Test SHT11  (about 10 seconds)
+
+Averages over 10 measurements
+Temperature - 34.8 < 34.9 < 34.9
+Hygrometry  - 23.9 < 23.9 < 23.9
+  ==== SHT11 OK ==== 
+
+
+------------ EVERYTHING OK ------------

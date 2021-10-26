@@ -1,0 +1,38 @@
+#if !defined(_FRCDAS_NAMES_H)
+
+#define _FRCDAS_NAMES_H 
+
+#if !defined(msg_names_t)
+typedef struct {
+  char * name ;
+  int value ;
+  char * comment ;
+} msg_names_t ;
+#endif
+
+static msg_names_t FrCdasMsgNames[] = {
+  {"M_REBOOT", M_REBOOT, NULL},
+  {"M_WAKEUP", M_WAKEUP, NULL},
+  {"M_RUN_ENABLE", M_RUN_ENABLE, NULL},
+  {"M_RUN_START_REQ", M_RUN_START_REQ, NULL},
+  {"M_RUN_PAUSE_REQ", M_RUN_PAUSE_REQ, NULL},
+  {"M_RUN_CONTINUE_REQ", M_RUN_CONTINUE_REQ, NULL},
+  {"M_RUN_STOP_REQ", M_RUN_STOP_REQ, NULL},
+  {"M_T3_YES", M_T3_YES, NULL},
+  {"M_CONFIG_SET", M_CONFIG_SET, NULL},
+  {"M_FLASH_TO_CONFIG", M_FLASH_TO_CONFIG, NULL},
+  {"M_CONFIG_TO_FLASH", M_CONFIG_TO_FLASH, NULL},
+  {"M_MONIT_REQ", M_MONIT_REQ, NULL},
+  {"M_CALIB_REQ", M_CALIB_REQ, NULL},
+  {"M_DOWNLOAD", M_DOWNLOAD, NULL},
+  {"M_DOWNLOAD_CHECK", M_DOWNLOAD_CHECK, NULL},
+  {"M_SHELL_CMD", M_SHELL_CMD, NULL},
+  {"M_MODULE2FLASH", M_MODULE2FLASH, NULL},
+  {"M_UPLOAD_REQ", M_UPLOAD_REQ, NULL},
+  {"M_SET_PARAM", M_SET_PARAM, NULL},
+  {"M_GPS", M_GPS, NULL},
+  {"M_MSG_ERROR_IN", M_MSG_ERROR_IN, NULL},
+  {NULL, 0, NULL}
+} ;
+
+#endif

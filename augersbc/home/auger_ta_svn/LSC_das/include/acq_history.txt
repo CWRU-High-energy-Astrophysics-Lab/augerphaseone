@@ -1,0 +1,67 @@
+ *
+ * History
+ *   - 0x11021100: Everything in place, but with Courty FPGA (no real trigger,
+ *                 no Muon trigger)
+ *   - 0x11041900: Same. Soft Fast and Slow triggers in Courty FPGA
+ *   - 0x11061000: Ready for installation tests at Golden/Lamar
+ *   - 0x11070600: Minor changes.
+ *   - 0x11070700: Hopefully fixed some errors with "das restart"
+ *   - 0x11071900: Preparing for D.Nitz trigger firmware
+ *                 Fix some issues with 'das stop/restart'
+ *   - 0x11080100: Mostly cleanup.
+ *   - 0x11080200: Modifs in msgsvr.
+ *   - 0x11080400: Same as 11080200, just for test
+ *   - 0x11081800: Fix error in case of ALL_T1 and MAX_T2_RATE (trigger2)
+ *   - 0x11082600: Preliminary handling of monitoring data from LR
+ *   - 0x11090200: LR monitoring data included and sent to CDAS.
+ *   - 0x11090900: Added usage of Run Conditions file (runcond.cfg)
+ *   - 0x11091200: Golin now replaces trigger2. Seems to work, needs test
+ *   - 0x11092000: Golin in principle complete but not tested. Some
+ *                 questions pending (which PMT channel is used ?
+ *   - 0x11092200: Added Radio Monitoring Data Handling.
+ *                 Golin and Ledlib updates (still NOT tested)
+ *   - 0x11100300: Fixed bug in lstest
+ *   - 0x11100500: Fixed bugs in ledlib and ttled
+ *   - 0x11101400: Fixed bugs in ledlib.
+ *                 Golin is working.
+ *   - 0x11102000: Added better generic messages in Golin.
+ *   - 0x11102400: Some cleanup. Golin + getrate seem to work. Need
+ *                 D.Nitz trigger to really test
+ *   - 0x11102600: Fixed a problem in function 'is_running' when
+ *                 called with the process name (instead of the full name like
+ *                 "/root/LSC/bin/process"
+ *                 Fixed a bug in Gocalib (in Test mode, killed das if
+ *                 das was running)
+ *   - 0x11102700: Ledlib can now fire more than 255 shots
+ *   - 0x11110400: Various cleanup, doxygen, ...
+ *   - 0x11110700: Added signal 12344 to force usage of t1fake in
+ *                 control even with D.Nitz firmware (not tested)
+ *   - 0x11111400: Several cleanups, bug fixes. Modified ttfe for
+ *                 better testing.
+ *   - 0x11111600: Various modifications to work with D.Nitz trigger
+ *                 firmware.
+ *   - 0x11112200: D.Nitz firmware fizes, muon handling, acqstatus
+ *                 additions. D.Nitz is working rather well (still Ext
+ *                 Trig are missing)
+ *   - 0x11112500: No much change except Trigger firmware includes
+ *                 External Trigger.
+ *   - 0x11112801: Fixing bug in gocalib and golin.
+ *   - 0x11121201: Some changes in gocalib, getrate (better log)
+ *   - 0x12011801: Several changes, bug fixes:
+ *                 Fixed bug in sample format (Nitz firmware)
+ *                 Enhancements in golin
+ *                 Tentaive implementation xbtrig
+ *   - 0x12031001: Bug fixes in golin and more. Almost complete
+ *                 version except T2 algo, T1 calib and muons calib/histos.
+ *   - 0x12071001: Few changes, mostly cosmetics
+ *   - 0x12083100: No change here (only in Services)
+ *   - 0x12110301: Minor bugs fixes. Added feled.
+ *   - 0x13032100: Adding histos in mufill (partial)
+ *   - 0x13032800: Try again histos.
+ *   - 0x13040801: Histos OK. Fix a BIG bug in FBlib !!!
+ *   - 0x13041501: Some calibrations and T2 algo in xbtrig
+ *   - 0x13041701: Calibration and t2 algo getting better, but still
+ *                 lot to do !
+ *   - 0x13042310: t1irq stop if too many irq
+ *   - 0x14022201: Added storage to big storage key (mounted on '/data')
+

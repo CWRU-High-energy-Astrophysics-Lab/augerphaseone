@@ -1,0 +1,17 @@
+# Used by ifup(8) and ifdown(8). See the interfaces(5) manpage or
+# /usr/share/doc/ifupdown/examples for more information.
+
+# We always want the loopback interface.
+#
+auto lo
+iface lo inet loopback
+
+auto eth0.2
+#allow-hotplug eth0
+#iface eth0.2 inet dhcp
+iface eth0.2 inet static
+address 192.168.3.100
+#  netmask 255.255.255.0
+gateway 192.168.3.1
+network 192.168.3.0
+broadcast 192.168.3.255

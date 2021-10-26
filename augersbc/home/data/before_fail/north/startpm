@@ -1,0 +1,46 @@
+#!/bin/bash
+#cd $HOME
+
+function help {
+    echo "Options:"
+    echo "  -i        : NON Interactive (create an xterm window for output)"
+    echo "              By default output to stdout"
+    echo "  -c <opts> : Concentrator specific options"
+    echo "  -p <opts> : Pm specific options"
+    exit 1
+}
+	      
+LS_OPTS=""
+PM_OPTS=""
+INTER="yes"
+
+while getopts c:p:ih CUROPT $*
+do
+    case $CUROPT in
+    c)
+	LS_OPTS="$OPTARG" ;;
+    p)
+	PM_OPTS="$OPTARG" ;;
+    i)
+	INTER="no" ;;
+    *)
+	help ;;
+    esac
+done
+
+echo "LS_OPTS: $LS_OPTS"
+
+cs -v $LS_OPTS &
+CSID=$!
+#echo "Cs Id: $CSID"
+sleep 1
+if [ "$INTER" == "no" ]
+then
+    xterm -geometry 80x44+700+180 -bg gray80 -fg red -fn 9x15bold -e pm
+else
+    pm
+fi
+
+# pm stopped, now kill also the concentrator
+sleep 1
+kill -3 $CSID

@@ -1,0 +1,103 @@
+#if !defined(_SIGNAMES_H_)
+
+
+#define _SIGNAMES_H_
+
+typedef struct {
+  char * name ;
+  int value ;
+  char * task ;
+  char * comment ;
+} sigauger_t ;
+
+static sigauger_t SigNames[] = {
+  {"READ_CONFIG", SIG_READ_CONFIG,
+   "Msgsvr, Gpsctrl", "Re-read Configuration file"},
+  {"SAVE_CONFIG", SIG_SAVE_CONFIG,
+   "Msgsvr", "Save Configuration files"},
+  {"RESET_VERBOSE", SIG_RESET_VERBOSE,
+   "All", "Reset Verbosity Level"},
+  {"INCREMENT_VERBOSE", SIG_INCREMENT_VERBOSE,
+   "All", "Increment Verbosity Level"},
+  {"DECREMENT_VERBOSE", SIG_DECREMENT_VERBOSE,
+   "All", "Decrement Verbosity Level"},
+  {"MEMLIB_STATUS_LOG", SIG_MEMLIB_STATUS_LOG,
+   "All", "Log Memory Usage"},
+#if 0
+  {"MEMLIB_STATUS_MSG", SIG_MEMLIB_STATUS_MSG,
+   "All", "??"},
+#endif
+  {"MONIT_SEND", SIG_MONIT_SEND,
+   "Calmonsvr", "Send Monitoring block"},
+  {"START_SAVE_T1", SIG_START_SAVE_T1,
+   "Trigger2", "Save All T1 to file"},
+  {"START_SAVE", SIG_START_SAVE,
+   "Calmonsvr,trigger2", "Start saving data to '/scr'"},
+  {"STOP_SAVE", SIG_STOP_SAVE,
+   "Calmonsvr,trigger2", "Stop saving data to file"},
+  {"START_SAVE_TO_SSD", SIG_START_SAVE_TO_SSD,
+   "Calmonsvr,trigger2", "Startsaving data to SSD '/data'"},
+  {"PPS_SIGNAL_READY", PPS_SIGNAL_READY,
+   "All", "1PPS occurred (from ppsirq)"},
+  {"GPSCTRL_GET_SATELLITES", SIG_GPSCTRL_GET_SATELLITES,
+   "Gpsctrl", "Get Nb of Satellites"},
+  {"GPSCTRL_FORCE_OK", SIG_GPSCTRL_FORCE_OK,
+   "Gpsctrl", "Force OK even if no Antenna"},
+  {"GPSCTRL_SEND_MREADY", SIG_GPSCTRL_SEND_MREADY,
+   "Gpsctrl", "Send M_READY Msg to CDAS"},
+  {"GPSCTRL_STATUS_STR", SIG_GPSCTRL_STATUS_STR,
+   "Gpsctrl", "Send Gps Status Generic Msg"},
+  {"GPSCTRL_SEND_DATE", SIG_GPSCTRL_SEND_DATE,
+   "Gpsctrl", "Send Date/time to Radio"},
+  {"PPS_IS_GOOD", SIG_PPS_IS_GOOD,
+   "Msgsvr", "PPS Good, tell to Radio"},
+  {"PPS_IS_BAD", SIG_PPS_IS_BAD,
+   "Msgsvr", "PPS Bad,tell Radio"},
+  {"GPS_HAS_DATE", SIG_GPS_HAS_DATE,
+   "Msgsvr", "GPS got the date, tell Radio"},
+  {"GPS_READY", SIG_GPS_READY,
+   "Msgsvr", "Send M_READY to CDAS"},
+  {"FORCE_WIRELESS_OK", SIG_FORCE_WIRELESS_OK,
+   "Msgsvr", "Force Wireless status OK"},
+  {"FORCE_WIRELESS_BAD", SIG_FORCE_WIRELESS_BAD,
+   "Msgsvr", "Force Wireless status BAD"},
+  {"GPSCTRL_SET_DATE", SIG_GPSCTRL_SET_DATE,
+   "Gpsctrl", "Set Sytem date/time"},
+  {"GPSCTRL_ALMANACH_STATUS", SIG_GPSCTRL_ALMANACH_STATUS,
+   "Gpsctrl", "Get almanach Status"},
+  {"GPSCTRL_ALMANACH_SAVE", SIG_GPSCTRL_ALMANACH_SAVE,
+   "Gpsctrl", "Get almanach Data"},
+  {"DOWNLOAD_RESET", SIG_DOWNLOAD_RESET,
+   "Download", "Reset Download status"},
+  {"START_TRIGGER", SIG_START_TRIGGER,
+   "Control", "Start Triggers"},
+  {"STOP_TRIGGER", SIG_STOP_TRIGGER,
+   "Control", "Stop Triggers"},
+  {"FAKE_SOFT_TRIGGERS", SIG_FAKE_SOFT_TRIGGERS,
+   "Control", "Toggle force t1fake soft triggers"},
+  {"ENABLE_GOLIN", SIG_ENABLE_GOLIN,
+   "Control", "Replace trigger2 by golin"},
+  {"DISABLE_GOLIN", SIG_DISABLE_GOLIN,
+   "Control", "Replace golin by trigger2"},
+  {"FAKE_T1_MIN", SIG_FAKE_T1_MIN,
+   "T1fake", "Minimum (1) Fake T1 / second"}, 
+  {"FAKE_T1_MAX", SIG_FAKE_T1_MAX,
+   "T1fake", "Maximum (200) Fake T1 / second"},
+  {"FAKE_RANDOM", SIG_FAKE_RANDOM,
+   "T1fake", "Random Period Fake Triggers"},
+  {"FAKE_NO_RANDOM", SIG_FAKE_NO_RANDOM,
+   "T1fake", "Fixed Period Fake Triggers"},
+  {"SHOW_NBEVT", SIG_SHOW_NBEVT,
+   "T1read, Grbread", "List current nb of T1/Grb"},
+  {"PPS_SEM_ENABLE", SIG_PPS_SEM_ENABLE,
+   "Ppsirq", "Enable RT semaphore for grbread"},
+  {"SAVE_CALIB", SIG_SAVE_CALIB,
+   "Mufill", "Save Calibration to files"},
+  {"START_MUONRUN", SIG_START_MUONRUN,
+   "Mufill", "Start a Muon Run (save data to file)"},
+  {"EVTSVR_SEND_EVENT", SIG_EVTSVR_SEND_EVENT,
+   "Evtsvr", "send Newest available event"},
+  {NULL, 0, NULL, NULL}
+} ;
+
+#endif

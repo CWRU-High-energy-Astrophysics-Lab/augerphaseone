@@ -1,0 +1,6 @@
+TA GLOBAL: USB2
+TA LOCAL: USB0
+AUGER SOUTH: USB1
+
+Last edited: Sep-30-2018
+Sean Quinn

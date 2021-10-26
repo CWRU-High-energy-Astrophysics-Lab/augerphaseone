@@ -1,0 +1,17 @@
+#!/bin/bash
+#
+# Compile all the stuff for LSC micro CDAS.
+# mkall ==> compile everything
+# mkall clean ==> remove all .o
+#
+# Note that Csradio is not included here, the Makefile should be modified according
+# to the version of Linux implemented on the SBC
+
+for i in Utils Concentrator Pm Csradio
+do
+	cd $i
+	make $1
+	cd ..
+done
+
+echo Finished

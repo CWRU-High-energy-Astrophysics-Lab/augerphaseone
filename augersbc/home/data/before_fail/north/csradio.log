@@ -1,0 +1,14 @@
+[I]csradio(2732) 1471542833  : Logfile 'csradio.log' Created - Thu Aug 18 17:53:53 2016
+[I]csradio(2732) 1471542833  : Initializing - Thu Aug 18 17:53:52 2016
+[I]csradio(2732) 1471542833  : Version 'csradio - V1.0
+$Author: guglielmi $ - $Revision: 1581 $ - $Date:: 2011-09-29 15:#$'
+[I]csradio(2732) 1471542833  : CsSocket: 3
+[I]csradio(2732) 1471542833  : Host Name: raspberrypi
+[I]csradio(2732) 1471542833  : Setsockopt: 0
+[I]csradio(2732) 1471542833  : Socket bound - CdasPort: 20900
+[I]csradio(2732) 1471542833  : CsSocket Created : 3
+[I]csradio(2732) 1471542833  : CanSocket Created : 4
+[I]csradio(2732) 1471542833  : Msg Queue: 'csradio'
+[I]csradio(2732) 1471542833  : Initialized
+[I]csradio(2732) 1471542833  : Waiting Cs Connection
+[I]csradio(2732) 1471542856  : Concentrator Connected

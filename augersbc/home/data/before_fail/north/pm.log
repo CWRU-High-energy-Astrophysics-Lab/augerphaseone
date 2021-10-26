@@ -1,0 +1,497 @@
+[I]pm(2745) 1471542846  : Logfile 'pm.log' Created - Thu Aug 18 17:54:06 2016
+[I]pm(2745) 1471542846  : HostName: localhost, Port: 25200
+[I]pm(2745) 1471542846  :     Ready - Thu Aug 18 17:54:06 2016
+[I]pm(2745) 1471542856  : Accepted : 5
+[I]pm(2745) 1471542858  : >>> GetBsxMsg at 1471542858.041759
+[I]pm(2745) 1471542858  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542858  : Got length: 107 [6b]
+[I]pm(2745) 1471542858  : Datum: D, BsId: 3, Left: 105
+[I]pm(2745) 1471542858  : >>> DecodePkt - length: 100, Pkt #: 66, lsid: 103
+[I]pm(2745) 1471542858  :    Nb msg: 2
+[I]pm(2745) 1471542858  : ALL Slice, msg_nb = 12
+[I]pm(2745) 1471542858  : decode_msg - Message Received - type 5 [M_T2_YES], 60 bytes
+[I]pm(2745) 1471542858  : ALL Slice, msg_nb = 13
+[I]pm(2745) 1471542858  : decode_msg - Message Received - type 0 [M_READY], 33 bytes
+[I]pm(2745) 1471542859  : >>> GetBsxMsg at 1471542859.026469
+[I]pm(2745) 1471542859  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542859  : Got length: 92 [5c]
+[I]pm(2745) 1471542859  : Datum: D, BsId: 3, Left: 90
+[I]pm(2745) 1471542859  : >>> DecodePkt - length: 85, Pkt #: 67, lsid: 103
+[I]pm(2745) 1471542859  :    Nb msg: 1
+[I]pm(2745) 1471542859  : ALL Slice, msg_nb = 14
+[I]pm(2745) 1471542859  : decode_msg - Message Received - type 5 [M_T2_YES], 78 bytes
+[I]pm(2745) 1471542860  : >>> GetBsxMsg at 1471542860.020204
+[I]pm(2745) 1471542860  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542860  : Got length: 74 [4a]
+[I]pm(2745) 1471542860  : Datum: D, BsId: 3, Left: 72
+[I]pm(2745) 1471542860  : >>> DecodePkt - length: 67, Pkt #: 68, lsid: 103
+[I]pm(2745) 1471542860  :    Nb msg: 1
+[I]pm(2745) 1471542860  : ALL Slice, msg_nb = 15
+[I]pm(2745) 1471542860  : decode_msg - Message Received - type 5 [M_T2_YES], 60 bytes
+[I]pm(2745) 1471542861  : >>> GetBsxMsg at 1471542861.036766
+[I]pm(2745) 1471542861  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542861  : Got length: 95 [5f]
+[I]pm(2745) 1471542861  : Datum: D, BsId: 3, Left: 93
+[I]pm(2745) 1471542861  : >>> DecodePkt - length: 88, Pkt #: 69, lsid: 103
+[I]pm(2745) 1471542861  :    Nb msg: 1
+[I]pm(2745) 1471542861  : ALL Slice, msg_nb = 16
+[I]pm(2745) 1471542861  : decode_msg - Message Received - type 5 [M_T2_YES], 81 bytes
+[I]pm(2745) 1471542862  : >>> GetBsxMsg at 1471542862.036105
+[I]pm(2745) 1471542862  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542862  : Got length: 80 [50]
+[I]pm(2745) 1471542862  : Datum: D, BsId: 3, Left: 78
+[I]pm(2745) 1471542862  : >>> DecodePkt - length: 73, Pkt #: 70, lsid: 103
+[I]pm(2745) 1471542862  :    Nb msg: 1
+[I]pm(2745) 1471542862  : ALL Slice, msg_nb = 17
+[I]pm(2745) 1471542862  : decode_msg - Message Received - type 5 [M_T2_YES], 66 bytes
+[I]pm(2745) 1471542863  : >>> GetBsxMsg at 1471542863.027696
+[I]pm(2745) 1471542863  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542863  : Got length: 98 [62]
+[I]pm(2745) 1471542863  : Datum: D, BsId: 3, Left: 96
+[I]pm(2745) 1471542863  : >>> DecodePkt - length: 91, Pkt #: 71, lsid: 103
+[I]pm(2745) 1471542863  :    Nb msg: 1
+[I]pm(2745) 1471542863  : ALL Slice, msg_nb = 18
+[I]pm(2745) 1471542863  : decode_msg - Message Received - type 5 [M_T2_YES], 84 bytes
+[I]pm(2745) 1471542864  : >>> GetBsxMsg at 1471542864.024947
+[I]pm(2745) 1471542864  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542864  : Got length: 86 [56]
+[I]pm(2745) 1471542864  : Datum: D, BsId: 3, Left: 84
+[I]pm(2745) 1471542864  : >>> DecodePkt - length: 79, Pkt #: 72, lsid: 103
+[I]pm(2745) 1471542864  :    Nb msg: 1
+[I]pm(2745) 1471542864  : ALL Slice, msg_nb = 19
+[I]pm(2745) 1471542864  : decode_msg - Message Received - type 5 [M_T2_YES], 72 bytes
+[I]pm(2745) 1471542865  : >>> GetBsxMsg at 1471542865.020917
+[I]pm(2745) 1471542865  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542865  : Got length: 83 [53]
+[I]pm(2745) 1471542865  : Datum: D, BsId: 3, Left: 81
+[I]pm(2745) 1471542865  : >>> DecodePkt - length: 76, Pkt #: 73, lsid: 103
+[I]pm(2745) 1471542865  :    Nb msg: 1
+[I]pm(2745) 1471542865  : ALL Slice, msg_nb = 20
+[I]pm(2745) 1471542865  : decode_msg - Message Received - type 5 [M_T2_YES], 69 bytes
+[I]pm(2745) 1471542866  : >>> GetBsxMsg at 1471542866.039411
+[I]pm(2745) 1471542866  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542866  : Got length: 110 [6e]
+[I]pm(2745) 1471542866  : Datum: D, BsId: 3, Left: 108
+[I]pm(2745) 1471542866  : >>> DecodePkt - length: 103, Pkt #: 74, lsid: 103
+[I]pm(2745) 1471542866  :    Nb msg: 1
+[I]pm(2745) 1471542866  : ALL Slice, msg_nb = 21
+[I]pm(2745) 1471542866  : decode_msg - Message Received - type 5 [M_T2_YES], 96 bytes
+[I]pm(2745) 1471542867  : >>> GetBsxMsg at 1471542867.023337
+[I]pm(2745) 1471542867  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542867  : Got length: 83 [53]
+[I]pm(2745) 1471542867  : Datum: D, BsId: 3, Left: 81
+[I]pm(2745) 1471542867  : >>> DecodePkt - length: 76, Pkt #: 75, lsid: 103
+[I]pm(2745) 1471542867  :    Nb msg: 1
+[I]pm(2745) 1471542867  : ALL Slice, msg_nb = 22
+[I]pm(2745) 1471542867  : decode_msg - Message Received - type 5 [M_T2_YES], 69 bytes
+[I]pm(2745) 1471542868  : >>> GetBsxMsg at 1471542868.017404
+[I]pm(2745) 1471542868  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542868  : Got length: 71 [47]
+[I]pm(2745) 1471542868  : Datum: D, BsId: 3, Left: 69
+[I]pm(2745) 1471542868  : >>> DecodePkt - length: 64, Pkt #: 76, lsid: 103
+[I]pm(2745) 1471542868  :    Nb msg: 1
+[I]pm(2745) 1471542868  : ALL Slice, msg_nb = 23
+[I]pm(2745) 1471542868  : decode_msg - Message Received - type 5 [M_T2_YES], 57 bytes
+[I]pm(2745) 1471542869  : >>> GetBsxMsg at 1471542869.030279
+[I]pm(2745) 1471542869  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542869  : Got length: 101 [65]
+[I]pm(2745) 1471542869  : Datum: D, BsId: 3, Left: 99
+[I]pm(2745) 1471542869  : >>> DecodePkt - length: 94, Pkt #: 77, lsid: 103
+[I]pm(2745) 1471542869  :    Nb msg: 1
+[I]pm(2745) 1471542869  : ALL Slice, msg_nb = 24
+[I]pm(2745) 1471542869  : decode_msg - Message Received - type 5 [M_T2_YES], 87 bytes
+[I]pm(2745) 1471542870  : >>> GetBsxMsg at 1471542870.027171
+[I]pm(2745) 1471542870  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542870  : Got length: 95 [5f]
+[I]pm(2745) 1471542870  : Datum: D, BsId: 3, Left: 93
+[I]pm(2745) 1471542870  : >>> DecodePkt - length: 88, Pkt #: 78, lsid: 103
+[I]pm(2745) 1471542870  :    Nb msg: 1
+[I]pm(2745) 1471542870  : ALL Slice, msg_nb = 25
+[I]pm(2745) 1471542870  : decode_msg - Message Received - type 5 [M_T2_YES], 81 bytes
+[I]pm(2745) 1471542871  : >>> GetBsxMsg at 1471542871.023400
+[I]pm(2745) 1471542871  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542871  : Got length: 101 [65]
+[I]pm(2745) 1471542871  : Datum: D, BsId: 3, Left: 99
+[I]pm(2745) 1471542871  : >>> DecodePkt - length: 94, Pkt #: 79, lsid: 103
+[I]pm(2745) 1471542871  :    Nb msg: 1
+[I]pm(2745) 1471542871  : ALL Slice, msg_nb = 26
+[I]pm(2745) 1471542871  : decode_msg - Message Received - type 5 [M_T2_YES], 87 bytes
+[I]pm(2745) 1471542872  : >>> GetBsxMsg at 1471542872.023278
+[I]pm(2745) 1471542872  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542872  : Got length: 86 [56]
+[I]pm(2745) 1471542872  : Datum: D, BsId: 3, Left: 84
+[I]pm(2745) 1471542872  : >>> DecodePkt - length: 79, Pkt #: 80, lsid: 103
+[I]pm(2745) 1471542872  :    Nb msg: 1
+[I]pm(2745) 1471542872  : ALL Slice, msg_nb = 27
+[I]pm(2745) 1471542872  : decode_msg - Message Received - type 5 [M_T2_YES], 72 bytes
+[I]pm(2745) 1471542873  : >>> GetBsxMsg at 1471542873.017006
+[I]pm(2745) 1471542873  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542873  : Got length: 77 [4d]
+[I]pm(2745) 1471542873  : Datum: D, BsId: 3, Left: 75
+[I]pm(2745) 1471542873  : >>> DecodePkt - length: 70, Pkt #: 81, lsid: 103
+[I]pm(2745) 1471542873  :    Nb msg: 1
+[I]pm(2745) 1471542873  : ALL Slice, msg_nb = 28
+[I]pm(2745) 1471542873  : decode_msg - Message Received - type 5 [M_T2_YES], 63 bytes
+[I]pm(2745) 1471542874  : >>> GetBsxMsg at 1471542874.028777
+[I]pm(2745) 1471542874  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542874  : Got length: 83 [53]
+[I]pm(2745) 1471542874  : Datum: D, BsId: 3, Left: 81
+[I]pm(2745) 1471542874  : >>> DecodePkt - length: 76, Pkt #: 82, lsid: 103
+[I]pm(2745) 1471542874  :    Nb msg: 1
+[I]pm(2745) 1471542874  : ALL Slice, msg_nb = 29
+[I]pm(2745) 1471542874  : decode_msg - Message Received - type 5 [M_T2_YES], 69 bytes
+[I]pm(2745) 1471542875  : >>> GetBsxMsg at 1471542875.023697
+[I]pm(2745) 1471542875  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542875  : Got length: 77 [4d]
+[I]pm(2745) 1471542875  : Datum: D, BsId: 3, Left: 75
+[I]pm(2745) 1471542875  : >>> DecodePkt - length: 70, Pkt #: 83, lsid: 103
+[I]pm(2745) 1471542875  :    Nb msg: 1
+[I]pm(2745) 1471542875  : ALL Slice, msg_nb = 30
+[I]pm(2745) 1471542875  : decode_msg - Message Received - type 5 [M_T2_YES], 63 bytes
+[I]pm(2745) 1471542876  : >>> GetBsxMsg at 1471542876.020448
+[I]pm(2745) 1471542876  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542876  : Got length: 77 [4d]
+[I]pm(2745) 1471542876  : Datum: D, BsId: 3, Left: 75
+[I]pm(2745) 1471542876  : >>> DecodePkt - length: 70, Pkt #: 84, lsid: 103
+[I]pm(2745) 1471542876  :    Nb msg: 1
+[I]pm(2745) 1471542876  : ALL Slice, msg_nb = 31
+[I]pm(2745) 1471542876  : decode_msg - Message Received - type 5 [M_T2_YES], 63 bytes
+[I]pm(2745) 1471542877  : >>> GetBsxMsg at 1471542877.020477
+[I]pm(2745) 1471542877  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542877  : Got length: 104 [68]
+[I]pm(2745) 1471542877  : Datum: D, BsId: 3, Left: 102
+[I]pm(2745) 1471542877  : >>> DecodePkt - length: 97, Pkt #: 85, lsid: 103
+[I]pm(2745) 1471542877  :    Nb msg: 1
+[I]pm(2745) 1471542877  : ALL Slice, msg_nb = 32
+[I]pm(2745) 1471542877  : decode_msg - Message Received - type 5 [M_T2_YES], 90 bytes
+[I]pm(2745) 1471542878  : >>> GetBsxMsg at 1471542878.033192
+[I]pm(2745) 1471542878  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542878  : Got length: 77 [4d]
+[I]pm(2745) 1471542878  : Datum: D, BsId: 3, Left: 75
+[I]pm(2745) 1471542878  : >>> DecodePkt - length: 70, Pkt #: 86, lsid: 103
+[I]pm(2745) 1471542878  :    Nb msg: 1
+[I]pm(2745) 1471542878  : ALL Slice, msg_nb = 33
+[I]pm(2745) 1471542878  : decode_msg - Message Received - type 5 [M_T2_YES], 63 bytes
+[I]pm(2745) 1471542879  : >>> GetBsxMsg at 1471542879.033119
+[I]pm(2745) 1471542879  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542879  : Got length: 101 [65]
+[I]pm(2745) 1471542879  : Datum: D, BsId: 3, Left: 99
+[I]pm(2745) 1471542879  : >>> DecodePkt - length: 94, Pkt #: 87, lsid: 103
+[I]pm(2745) 1471542879  :    Nb msg: 1
+[I]pm(2745) 1471542879  : ALL Slice, msg_nb = 34
+[I]pm(2745) 1471542879  : decode_msg - Message Received - type 5 [M_T2_YES], 87 bytes
+[I]pm(2745) 1471542880  : >>> GetBsxMsg at 1471542880.016507
+[I]pm(2745) 1471542880  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542880  : Got length: 77 [4d]
+[I]pm(2745) 1471542880  : Datum: D, BsId: 3, Left: 75
+[I]pm(2745) 1471542880  : >>> DecodePkt - length: 70, Pkt #: 88, lsid: 103
+[I]pm(2745) 1471542880  :    Nb msg: 1
+[I]pm(2745) 1471542880  : ALL Slice, msg_nb = 35
+[I]pm(2745) 1471542880  : decode_msg - Message Received - type 5 [M_T2_YES], 63 bytes
+[I]pm(2745) 1471542881  : >>> GetBsxMsg at 1471542881.029577
+[I]pm(2745) 1471542881  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542881  : Got length: 86 [56]
+[I]pm(2745) 1471542881  : Datum: D, BsId: 3, Left: 84
+[I]pm(2745) 1471542881  : >>> DecodePkt - length: 79, Pkt #: 89, lsid: 103
+[I]pm(2745) 1471542881  :    Nb msg: 1
+[I]pm(2745) 1471542881  : ALL Slice, msg_nb = 36
+[I]pm(2745) 1471542881  : decode_msg - Message Received - type 5 [M_T2_YES], 72 bytes
+[I]pm(2745) 1471542882  : >>> GetBsxMsg at 1471542882.025697
+[I]pm(2745) 1471542882  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542882  : Got length: 86 [56]
+[I]pm(2745) 1471542882  : Datum: D, BsId: 3, Left: 84
+[I]pm(2745) 1471542882  : >>> DecodePkt - length: 79, Pkt #: 90, lsid: 103
+[I]pm(2745) 1471542882  :    Nb msg: 1
+[I]pm(2745) 1471542882  : ALL Slice, msg_nb = 37
+[I]pm(2745) 1471542882  : decode_msg - Message Received - type 5 [M_T2_YES], 72 bytes
+[I]pm(2745) 1471542883  : >>> GetBsxMsg at 1471542883.017023
+[I]pm(2745) 1471542883  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542883  : Got length: 74 [4a]
+[I]pm(2745) 1471542883  : Datum: D, BsId: 3, Left: 72
+[I]pm(2745) 1471542883  : >>> DecodePkt - length: 67, Pkt #: 91, lsid: 103
+[I]pm(2745) 1471542883  :    Nb msg: 1
+[I]pm(2745) 1471542883  : ALL Slice, msg_nb = 38
+[I]pm(2745) 1471542883  : decode_msg - Message Received - type 5 [M_T2_YES], 60 bytes
+[I]pm(2745) 1471542884  : >>> GetBsxMsg at 1471542884.019905
+[I]pm(2745) 1471542884  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542884  : Got length: 95 [5f]
+[I]pm(2745) 1471542884  : Datum: D, BsId: 3, Left: 93
+[I]pm(2745) 1471542884  : >>> DecodePkt - length: 88, Pkt #: 92, lsid: 103
+[I]pm(2745) 1471542884  :    Nb msg: 1
+[I]pm(2745) 1471542884  : ALL Slice, msg_nb = 39
+[I]pm(2745) 1471542884  : decode_msg - Message Received - type 5 [M_T2_YES], 81 bytes
+[I]pm(2745) 1471542885  : >>> GetBsxMsg at 1471542885.026950
+[I]pm(2745) 1471542885  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542885  : Got length: 95 [5f]
+[I]pm(2745) 1471542885  : Datum: D, BsId: 3, Left: 93
+[I]pm(2745) 1471542885  : >>> DecodePkt - length: 88, Pkt #: 93, lsid: 103
+[I]pm(2745) 1471542885  :    Nb msg: 1
+[I]pm(2745) 1471542885  : ALL Slice, msg_nb = 40
+[I]pm(2745) 1471542885  : decode_msg - Message Received - type 5 [M_T2_YES], 81 bytes
+[I]pm(2745) 1471542886  : >>> GetBsxMsg at 1471542886.019436
+[I]pm(2745) 1471542886  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542886  : Got length: 68 [44]
+[I]pm(2745) 1471542886  : Datum: D, BsId: 3, Left: 66
+[I]pm(2745) 1471542886  : >>> DecodePkt - length: 61, Pkt #: 94, lsid: 103
+[I]pm(2745) 1471542886  :    Nb msg: 1
+[I]pm(2745) 1471542886  : ALL Slice, msg_nb = 41
+[I]pm(2745) 1471542886  : decode_msg - Message Received - type 5 [M_T2_YES], 54 bytes
+[I]pm(2745) 1471542887  : >>> GetBsxMsg at 1471542887.019938
+[I]pm(2745) 1471542887  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542887  : Got length: 101 [65]
+[I]pm(2745) 1471542887  : Datum: D, BsId: 3, Left: 99
+[I]pm(2745) 1471542887  : >>> DecodePkt - length: 94, Pkt #: 95, lsid: 103
+[I]pm(2745) 1471542887  :    Nb msg: 1
+[I]pm(2745) 1471542887  : ALL Slice, msg_nb = 42
+[I]pm(2745) 1471542887  : decode_msg - Message Received - type 5 [M_T2_YES], 87 bytes
+[I]pm(2745) 1471542888  : >>> GetBsxMsg at 1471542888.029582
+[I]pm(2745) 1471542888  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542888  : Got length: 107 [6b]
+[I]pm(2745) 1471542888  : Datum: D, BsId: 3, Left: 105
+[I]pm(2745) 1471542888  : >>> DecodePkt - length: 100, Pkt #: 96, lsid: 103
+[I]pm(2745) 1471542888  :    Nb msg: 1
+[I]pm(2745) 1471542888  : ALL Slice, msg_nb = 43
+[I]pm(2745) 1471542888  : decode_msg - Message Received - type 5 [M_T2_YES], 93 bytes
+[I]pm(2745) 1471542889  : >>> GetBsxMsg at 1471542889.027553
+[I]pm(2745) 1471542889  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542889  : Got length: 65 [41]
+[I]pm(2745) 1471542889  : Datum: D, BsId: 3, Left: 63
+[I]pm(2745) 1471542889  : >>> DecodePkt - length: 58, Pkt #: 97, lsid: 103
+[I]pm(2745) 1471542889  :    Nb msg: 1
+[I]pm(2745) 1471542889  : ALL Slice, msg_nb = 44
+[I]pm(2745) 1471542889  : decode_msg - Message Received - type 5 [M_T2_YES], 51 bytes
+[I]pm(2745) 1471542890  : >>> GetBsxMsg at 1471542890.016735
+[I]pm(2745) 1471542890  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542890  : Got length: 74 [4a]
+[I]pm(2745) 1471542890  : Datum: D, BsId: 3, Left: 72
+[I]pm(2745) 1471542890  : >>> DecodePkt - length: 67, Pkt #: 98, lsid: 103
+[I]pm(2745) 1471542890  :    Nb msg: 1
+[I]pm(2745) 1471542890  : ALL Slice, msg_nb = 45
+[I]pm(2745) 1471542890  : decode_msg - Message Received - type 5 [M_T2_YES], 60 bytes
+[I]pm(2745) 1471542891  : >>> GetBsxMsg at 1471542891.027371
+[I]pm(2745) 1471542891  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542891  : Got length: 77 [4d]
+[I]pm(2745) 1471542891  : Datum: D, BsId: 3, Left: 75
+[I]pm(2745) 1471542891  : >>> DecodePkt - length: 70, Pkt #: 99, lsid: 103
+[I]pm(2745) 1471542891  :    Nb msg: 1
+[I]pm(2745) 1471542891  : ALL Slice, msg_nb = 46
+[I]pm(2745) 1471542891  : decode_msg - Message Received - type 5 [M_T2_YES], 63 bytes
+[I]pm(2745) 1471542892  : >>> GetBsxMsg at 1471542892.028421
+[I]pm(2745) 1471542892  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542892  : Got length: 89 [59]
+[I]pm(2745) 1471542892  : Datum: D, BsId: 3, Left: 87
+[I]pm(2745) 1471542892  : >>> DecodePkt - length: 82, Pkt #: 100, lsid: 103
+[I]pm(2745) 1471542892  :    Nb msg: 1
+[I]pm(2745) 1471542892  : ALL Slice, msg_nb = 47
+[I]pm(2745) 1471542892  : decode_msg - Message Received - type 5 [M_T2_YES], 75 bytes
+[I]pm(2745) 1471542893  : >>> GetBsxMsg at 1471542893.020163
+[I]pm(2745) 1471542893  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542893  : Got length: 101 [65]
+[I]pm(2745) 1471542893  : Datum: D, BsId: 3, Left: 99
+[I]pm(2745) 1471542893  : >>> DecodePkt - length: 94, Pkt #: 101, lsid: 103
+[I]pm(2745) 1471542893  :    Nb msg: 1
+[I]pm(2745) 1471542893  : ALL Slice, msg_nb = 48
+[I]pm(2745) 1471542893  : decode_msg - Message Received - type 5 [M_T2_YES], 87 bytes
+[I]pm(2745) 1471542894  : >>> GetBsxMsg at 1471542894.030124
+[I]pm(2745) 1471542894  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542894  : Got length: 77 [4d]
+[I]pm(2745) 1471542894  : Datum: D, BsId: 3, Left: 75
+[I]pm(2745) 1471542894  : >>> DecodePkt - length: 70, Pkt #: 102, lsid: 103
+[I]pm(2745) 1471542894  :    Nb msg: 1
+[I]pm(2745) 1471542894  : ALL Slice, msg_nb = 49
+[I]pm(2745) 1471542894  : decode_msg - Message Received - type 5 [M_T2_YES], 63 bytes
+[I]pm(2745) 1471542895  : >>> GetBsxMsg at 1471542895.029242
+[I]pm(2745) 1471542895  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542895  : Got length: 92 [5c]
+[I]pm(2745) 1471542895  : Datum: D, BsId: 3, Left: 90
+[I]pm(2745) 1471542895  : >>> DecodePkt - length: 85, Pkt #: 103, lsid: 103
+[I]pm(2745) 1471542895  :    Nb msg: 1
+[I]pm(2745) 1471542895  : ALL Slice, msg_nb = 50
+[I]pm(2745) 1471542895  : decode_msg - Message Received - type 5 [M_T2_YES], 78 bytes
+[I]pm(2745) 1471542896  : >>> GetBsxMsg at 1471542896.030875
+[I]pm(2745) 1471542896  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542896  : Got length: 98 [62]
+[I]pm(2745) 1471542896  : Datum: D, BsId: 3, Left: 96
+[I]pm(2745) 1471542896  : >>> DecodePkt - length: 91, Pkt #: 104, lsid: 103
+[I]pm(2745) 1471542896  :    Nb msg: 1
+[I]pm(2745) 1471542896  : ALL Slice, msg_nb = 51
+[I]pm(2745) 1471542896  : decode_msg - Message Received - type 5 [M_T2_YES], 84 bytes
+[I]pm(2745) 1471542897  : >>> GetBsxMsg at 1471542897.036772
+[I]pm(2745) 1471542897  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542897  : Got length: 89 [59]
+[I]pm(2745) 1471542897  : Datum: D, BsId: 3, Left: 87
+[I]pm(2745) 1471542897  : >>> DecodePkt - length: 82, Pkt #: 105, lsid: 103
+[I]pm(2745) 1471542897  :    Nb msg: 1
+[I]pm(2745) 1471542897  : ALL Slice, msg_nb = 52
+[I]pm(2745) 1471542897  : decode_msg - Message Received - type 5 [M_T2_YES], 75 bytes
+[I]pm(2745) 1471542898  : >>> GetBsxMsg at 1471542898.025349
+[I]pm(2745) 1471542898  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542898  : Got length: 68 [44]
+[I]pm(2745) 1471542898  : Datum: D, BsId: 3, Left: 66
+[I]pm(2745) 1471542898  : >>> DecodePkt - length: 61, Pkt #: 106, lsid: 103
+[I]pm(2745) 1471542898  :    Nb msg: 1
+[I]pm(2745) 1471542898  : ALL Slice, msg_nb = 53
+[I]pm(2745) 1471542898  : decode_msg - Message Received - type 5 [M_T2_YES], 54 bytes
+[I]pm(2745) 1471542899  : >>> GetBsxMsg at 1471542899.033312
+[I]pm(2745) 1471542899  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542899  : Got length: 80 [50]
+[I]pm(2745) 1471542899  : Datum: D, BsId: 3, Left: 78
+[I]pm(2745) 1471542899  : >>> DecodePkt - length: 73, Pkt #: 107, lsid: 103
+[I]pm(2745) 1471542899  :    Nb msg: 1
+[I]pm(2745) 1471542899  : ALL Slice, msg_nb = 54
+[I]pm(2745) 1471542899  : decode_msg - Message Received - type 5 [M_T2_YES], 66 bytes
+[I]pm(2745) 1471542900  : >>> GetBsxMsg at 1471542900.025401
+[I]pm(2745) 1471542900  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542900  : Got length: 77 [4d]
+[I]pm(2745) 1471542900  : Datum: D, BsId: 3, Left: 75
+[I]pm(2745) 1471542900  : >>> DecodePkt - length: 70, Pkt #: 108, lsid: 103
+[I]pm(2745) 1471542900  :    Nb msg: 1
+[I]pm(2745) 1471542900  : ALL Slice, msg_nb = 55
+[I]pm(2745) 1471542900  : decode_msg - Message Received - type 5 [M_T2_YES], 63 bytes
+[I]pm(2745) 1471542901  : >>> GetBsxMsg at 1471542901.023479
+[I]pm(2745) 1471542901  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542901  : Got length: 101 [65]
+[I]pm(2745) 1471542901  : Datum: D, BsId: 3, Left: 99
+[I]pm(2745) 1471542901  : >>> DecodePkt - length: 94, Pkt #: 109, lsid: 103
+[I]pm(2745) 1471542901  :    Nb msg: 1
+[I]pm(2745) 1471542901  : ALL Slice, msg_nb = 56
+[I]pm(2745) 1471542901  : decode_msg - Message Received - type 5 [M_T2_YES], 87 bytes
+[I]pm(2745) 1471542902  : >>> GetBsxMsg at 1471542902.021585
+[I]pm(2745) 1471542902  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542902  : Got length: 77 [4d]
+[I]pm(2745) 1471542902  : Datum: D, BsId: 3, Left: 75
+[I]pm(2745) 1471542902  : >>> DecodePkt - length: 70, Pkt #: 110, lsid: 103
+[I]pm(2745) 1471542902  :    Nb msg: 1
+[I]pm(2745) 1471542902  : ALL Slice, msg_nb = 57
+[I]pm(2745) 1471542902  : decode_msg - Message Received - type 5 [M_T2_YES], 63 bytes
+[I]pm(2745) 1471542903  : >>> GetBsxMsg at 1471542903.016735
+[I]pm(2745) 1471542903  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542903  : Got length: 68 [44]
+[I]pm(2745) 1471542903  : Datum: D, BsId: 3, Left: 66
+[I]pm(2745) 1471542903  : >>> DecodePkt - length: 61, Pkt #: 111, lsid: 103
+[I]pm(2745) 1471542903  :    Nb msg: 1
+[I]pm(2745) 1471542903  : ALL Slice, msg_nb = 58
+[I]pm(2745) 1471542903  : decode_msg - Message Received - type 5 [M_T2_YES], 54 bytes
+[I]pm(2745) 1471542904  : >>> GetBsxMsg at 1471542904.033945
+[I]pm(2745) 1471542904  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542904  : Got length: 107 [6b]
+[I]pm(2745) 1471542904  : Datum: D, BsId: 3, Left: 105
+[I]pm(2745) 1471542904  : >>> DecodePkt - length: 100, Pkt #: 112, lsid: 103
+[I]pm(2745) 1471542904  :    Nb msg: 1
+[I]pm(2745) 1471542904  : ALL Slice, msg_nb = 59
+[I]pm(2745) 1471542904  : decode_msg - Message Received - type 5 [M_T2_YES], 93 bytes
+[I]pm(2745) 1471542905  : >>> GetBsxMsg at 1471542905.026968
+[I]pm(2745) 1471542905  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542905  : Got length: 80 [50]
+[I]pm(2745) 1471542905  : Datum: D, BsId: 3, Left: 78
+[I]pm(2745) 1471542905  : >>> DecodePkt - length: 73, Pkt #: 113, lsid: 103
+[I]pm(2745) 1471542905  :    Nb msg: 1
+[I]pm(2745) 1471542905  : ALL Slice, msg_nb = 60
+[I]pm(2745) 1471542905  : decode_msg - Message Received - type 5 [M_T2_YES], 66 bytes
+[I]pm(2745) 1471542906  : >>> GetBsxMsg at 1471542906.025154
+[I]pm(2745) 1471542906  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542906  : Got length: 107 [6b]
+[I]pm(2745) 1471542906  : Datum: D, BsId: 3, Left: 105
+[I]pm(2745) 1471542906  : >>> DecodePkt - length: 100, Pkt #: 114, lsid: 103
+[I]pm(2745) 1471542906  :    Nb msg: 1
+[I]pm(2745) 1471542906  : ALL Slice, msg_nb = 61
+[I]pm(2745) 1471542906  : decode_msg - Message Received - type 5 [M_T2_YES], 93 bytes
+[I]pm(2745) 1471542907  : >>> GetBsxMsg at 1471542907.021924
+[I]pm(2745) 1471542907  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542907  : Got length: 107 [6b]
+[I]pm(2745) 1471542907  : Datum: D, BsId: 3, Left: 105
+[I]pm(2745) 1471542907  : >>> DecodePkt - length: 100, Pkt #: 115, lsid: 103
+[I]pm(2745) 1471542907  :    Nb msg: 1
+[I]pm(2745) 1471542907  : ALL Slice, msg_nb = 62
+[I]pm(2745) 1471542907  : decode_msg - Message Received - type 5 [M_T2_YES], 93 bytes
+[I]pm(2745) 1471542908  : >>> GetBsxMsg at 1471542908.018502
+[I]pm(2745) 1471542908  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542908  : Got length: 77 [4d]
+[I]pm(2745) 1471542908  : Datum: D, BsId: 3, Left: 75
+[I]pm(2745) 1471542908  : >>> DecodePkt - length: 70, Pkt #: 116, lsid: 103
+[I]pm(2745) 1471542908  :    Nb msg: 1
+[I]pm(2745) 1471542908  : ALL Slice, msg_nb = 63
+[I]pm(2745) 1471542908  : decode_msg - Message Received - type 5 [M_T2_YES], 63 bytes
+[I]pm(2745) 1471542909  : >>> GetBsxMsg at 1471542909.028010
+[I]pm(2745) 1471542909  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542909  : Got length: 68 [44]
+[I]pm(2745) 1471542909  : Datum: D, BsId: 3, Left: 66
+[I]pm(2745) 1471542909  : >>> DecodePkt - length: 61, Pkt #: 117, lsid: 103
+[I]pm(2745) 1471542909  :    Nb msg: 1
+[I]pm(2745) 1471542909  : ALL Slice, msg_nb = 0
+[I]pm(2745) 1471542909  : decode_msg - Message Received - type 5 [M_T2_YES], 54 bytes
+[I]pm(2745) 1471542910  : >>> GetBsxMsg at 1471542910.020022
+[I]pm(2745) 1471542910  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542910  : Got length: 95 [5f]
+[I]pm(2745) 1471542910  : Datum: D, BsId: 3, Left: 93
+[I]pm(2745) 1471542910  : >>> DecodePkt - length: 88, Pkt #: 118, lsid: 103
+[I]pm(2745) 1471542910  :    Nb msg: 1
+[I]pm(2745) 1471542910  : ALL Slice, msg_nb = 1
+[I]pm(2745) 1471542910  : decode_msg - Message Received - type 5 [M_T2_YES], 81 bytes
+[I]pm(2745) 1471542910  : Send msg length: 12, total: 24
+[I]pm(2745) 1471542911  : >>> GetBsxMsg at 1471542911.028791
+[I]pm(2745) 1471542911  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542911  : Got length: 68 [44]
+[I]pm(2745) 1471542911  : Datum: D, BsId: 3, Left: 66
+[I]pm(2745) 1471542911  : >>> DecodePkt - length: 61, Pkt #: 119, lsid: 103
+[I]pm(2745) 1471542911  :    Nb msg: 1
+[I]pm(2745) 1471542911  : ALL Slice, msg_nb = 2
+[I]pm(2745) 1471542911  : decode_msg - Message Received - type 5 [M_T2_YES], 54 bytes
+[I]pm(2745) 1471542912  : >>> GetBsxMsg at 1471542912.019199
+[I]pm(2745) 1471542912  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542912  : Got length: 86 [56]
+[I]pm(2745) 1471542912  : Datum: D, BsId: 3, Left: 84
+[I]pm(2745) 1471542912  : >>> DecodePkt - length: 79, Pkt #: 120, lsid: 103
+[I]pm(2745) 1471542912  :    Nb msg: 1
+[I]pm(2745) 1471542912  : ALL Slice, msg_nb = 3
+[I]pm(2745) 1471542912  : decode_msg - Message Received - type 5 [M_T2_YES], 72 bytes
+[I]pm(2745) 1471542913  : >>> GetBsxMsg at 1471542913.028158
+[I]pm(2745) 1471542913  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542913  : Got length: 92 [5c]
+[I]pm(2745) 1471542913  : Datum: D, BsId: 3, Left: 90
+[I]pm(2745) 1471542913  : >>> DecodePkt - length: 85, Pkt #: 121, lsid: 103
+[I]pm(2745) 1471542913  :    Nb msg: 1
+[I]pm(2745) 1471542913  : ALL Slice, msg_nb = 4
+[I]pm(2745) 1471542913  : decode_msg - Message Received - type 5 [M_T2_YES], 78 bytes
+[I]pm(2745) 1471542914  : >>> GetBsxMsg at 1471542914.034338
+[I]pm(2745) 1471542914  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542914  : Got length: 71 [47]
+[I]pm(2745) 1471542914  : Datum: D, BsId: 3, Left: 69
+[I]pm(2745) 1471542914  : >>> DecodePkt - length: 64, Pkt #: 122, lsid: 103
+[I]pm(2745) 1471542914  :    Nb msg: 1
+[I]pm(2745) 1471542914  : ALL Slice, msg_nb = 5
+[I]pm(2745) 1471542914  : decode_msg - Message Received - type 5 [M_T2_YES], 57 bytes
+[I]pm(2745) 1471542915  : >>> GetBsxMsg at 1471542915.029462
+[I]pm(2745) 1471542915  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542915  : Got length: 142 [8e]
+[I]pm(2745) 1471542915  : Datum: D, BsId: 3, Left: 140
+[I]pm(2745) 1471542915  : >>> DecodePkt - length: 135, Pkt #: 124, lsid: 103
+[I]pm(2745) 1471542915  :    Nb msg: 2
+[I]pm(2745) 1471542915  : ALL Slice, msg_nb = 6
+[I]pm(2745) 1471542915  : decode_msg - Message Received - type 5 [M_T2_YES], 75 bytes
+[I]pm(2745) 1471542915  : ALL Slice, msg_nb = 7
+[I]pm(2745) 1471542915  : decode_msg - Message Received - type 21 [M_GENERIC_STR], 53 bytes
+[I]pm(2745) 1471542916  : >>> GetBsxMsg at 1471542916.026911
+[I]pm(2745) 1471542916  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542916  : Got length: 95 [5f]
+[I]pm(2745) 1471542916  : Datum: D, BsId: 3, Left: 93
+[I]pm(2745) 1471542916  : >>> DecodePkt - length: 88, Pkt #: 125, lsid: 103
+[I]pm(2745) 1471542916  :    Nb msg: 1
+[I]pm(2745) 1471542916  : ALL Slice, msg_nb = 8
+[I]pm(2745) 1471542916  : decode_msg - Message Received - type 5 [M_T2_YES], 81 bytes
+[I]pm(2745) 1471542917  : >>> GetBsxMsg at 1471542917.021769
+[I]pm(2745) 1471542917  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542917  : Got length: 95 [5f]
+[I]pm(2745) 1471542917  : Datum: D, BsId: 3, Left: 93
+[I]pm(2745) 1471542917  : >>> DecodePkt - length: 88, Pkt #: 126, lsid: 103
+[I]pm(2745) 1471542917  :    Nb msg: 1
+[I]pm(2745) 1471542917  : ALL Slice, msg_nb = 9
+[I]pm(2745) 1471542917  : decode_msg - Message Received - type 5 [M_T2_YES], 81 bytes
+[I]pm(2745) 1471542918  : >>> GetBsxMsg at 1471542918.021080
+[I]pm(2745) 1471542918  : Got Preambl '!BS2PC!'
+[I]pm(2745) 1471542918  : Got length: 98 [62]
+[I]pm(2745) 1471542918  : Datum: D, BsId: 3, Left: 96
+[I]pm(2745) 1471542918  : >>> DecodePkt - length: 91, Pkt #: 127, lsid: 103
+[I]pm(2745) 1471542918  :    Nb msg: 1
+[I]pm(2745) 1471542918  : ALL Slice, msg_nb = 10
+[I]pm(2745) 1471542918  : decode_msg - Message Received - type 5 [M_T2_YES], 84 bytes

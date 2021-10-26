@@ -1,0 +1,6 @@
+#!/bin/sh
+
+/sbin/modprobe sja1000_isa mem=0x81004c00 irq=65 clk=24000000
+/sbin/ip link set can0 type can bitrate 125000
+/sbin/ifconfig can0 up
+

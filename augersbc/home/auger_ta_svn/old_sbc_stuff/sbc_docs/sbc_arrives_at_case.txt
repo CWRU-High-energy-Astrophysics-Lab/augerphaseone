@@ -1,0 +1,173 @@
+May 6 2015
+Cleveland, OH
+
+Today the TS-7250 v2 arrived at CWRU from our friends at FERMILAB.
+The system has the following hardware:
+
+Marvell PXA166 800 MHz ARM9 CPU
+512 MB DDR3 RAM
+32 GB MicroSD flash drive
+x2 USB 2.0 ports
+10/100 Ethernet port
+x3 Serial ports
+12 VDC Power adapter (system itself only uses 2W, CrAzY!)
+
+Also includes a nice painted metal enclosure.
+
+## Software preliminaries
+
+Before the board arrived I installed the "initramfs" image provided by
+Technologic Systems. I followed the instructions in Section 4.1 of 
+their Wiki (which is very helpful) at the following link
+http://wiki.embeddedarm.com/wiki/TS-7250-V2#MicroSD_Card
+
+The link says it's for a 4 GB SD card, so it's possible that our OS will
+only be able to use 4 GB, but maybe it's just a nominal value:
+I'll find out soon enough.
+
+After the image was installed I followed Section 5.3 for compiling the
+Linux Kernel. This involves getting some new libraries and such (since
+I did it on a Debian machine I used apt-get). I didn't run into any problems
+during this. NOTE: There is the option to build the kernel with compar-drivers
+which allow you to use a WIFI-N-USB2 wireless device. I figured this was
+kind of cool, and it might even be necessary if we can't get an ethernet
+cable to the SBC for some reason.
+
+## Initial boot up
+
+The only difficulty I had was putting in the microSD card. For some reason
+I didn't realize it slides into the clip mechanism, and I tried multiple
+times to close it improperly. Look out for that.
+
+Bootup involves connecting the power cable. First one must remove a small 2
+pin adapter.
+
+I powered it on and was greeted by a solid green light. Things seem to have
+gone well.
+
+Next I needed to determine the last 6 MAC ID characters (these weren't
+provided). There are some instructions for doing this on the Wiki. I
+didn't follow those and just used
+
+avahi-discover
+
+This should list devices running a bunch of different protocols on your LAN.
+The SBC was discovered as:
+Found service 'TS-7250 telnet [49dc35]' of type '_telnet._tcp' in domain 'local' on 2.0.
+Found service 'TS-7250 console [49dc35]' of type '_telnet._tcp' in domain 'local' on 2.0.
+Found service 'TS-7250 http [49dc35]' of type '_http._tcp' in domain 'local' on 2.0.
+
+So the last 6 of the MAC are: 49:DC:35
+
+## Connecting using telnet
+Connecting to the device from another host on the LAN is easily done with
+telnet.
+
+telnet ts7250-49dc35.local
+
+This will bring you to the low level kernel. Only by accident did I discover
+how to leave this and enter Debian. To get to Debian type
+
+exit
+
+The default login is "root" with no password. Also for future reference the
+hardware address is 00:d0:69:49:dc:35
+This can be determined using this command (must be on the SBC host of course)
+
+ifconfig -a
+
+------------------------------------------------------------------------------
+
+May 7, 2015
+
+By default the board is set to boot to Technologic's "initramfs" environment
+We should change this to immediately boot to Debian. More on this later.
+Right now I'm having trouble getting a DHCP lease in our network.
+
+Well, we weren't getting a lease because we didn't have a name service 
+daemon running. Apparently this isn't run by default in this flavor of
+Debian.
+
+To fix this we need to execute the process at start up time. I've made a
+custom file called "dhcp-client" which is a shell script to start
+
+dhclient
+
+Next don't forget to make it executable
+
+chmod 755 dhcp-client
+
+Another necessary step is to grow the partition on the microSD card. It's 
+easy to do with the GParted program (GUI based). Open the program, 
+unmount the correct device, then choose the option that grows the partition.
+Voila, now our rootfs fills most of the card.
+
+## Run Debian on boot up
+
+Instead of landing in the initramfs provided by Technologic, we want our
+SBC to be in Debian, so all our processes and programs are executed. We
+enable this by switching the "soft jumper" to 1. First open a browser and
+go to
+
+http://ts7250-49dc35.local
+
+Then check the JP1 box and reboot the board (Reboot this board link).
+
+This can also be accomplished by issuing this command on the board
+
+tshwctl --setjp=1
+
+To revert back to Technologic's "initramfs", use
+
+tshwctl --removejp=1
+
+------------------------------------------------------------------------------
+
+May 8, 2015
+
+## Networking
+
+Yesterday presented a small crisis: since I changed the "software" jumper to
+boot Debian automatically, but it seems the network settings weren't configured
+properly. This of course makes it impossible to ssh or telnet in. To deal with
+it you need to bust out a serial/USB adapter and connect that way. I used
+minicom on my desktop machine, and changed the settings of the connection 
+according to instructions found here
+
+http://wiki.embeddedarm.com/wiki/TS-7250-V2#Option_2:_Serial_Console
+
+Finding the right settings proved to be an all day affair. It seems that eth0
+is *not* the default hardware adapter. In fact, neither was eth1. The right
+adapter is, of course, eth0.2, at least on the current installation.
+
+So, to help the little guy connect to the network one must edit the 
+/etc/network/interface config file so that eth0.2 is on and attempts
+to get an IP from your trusty name server. The current file looks like 
+
+# /etc/network/interfaces
+# Used by ifup(8) and ifdown(8). See the interfaces(5) manpage or
+# /usr/share/doc/ifupdown/examples for more information.
+
+# We always want the loopback interface.
+#
+auto lo
+iface lo inet loopback
+
+auto eth0.2
+#allow-hotplug eth0
+iface eth0.2 inet dhcp
+#iface eth0 inet static
+#  address 192.168.0.50
+#  netmask 255.255.255.0
+#  gateway 192.168.0.1
+
+
+Now the sbc is able to get an IP, and everyone's happy. I can continue 
+development over ssh instead of having my desk covered in serial cables.
+
+One last point, for some reason the default locale is not set in the
+distribution. To correct this, edit the file /etc/default/locale to use
+
+LC_ALL=en_US.UTF-8
+LANG=en_US.UTF-8
+

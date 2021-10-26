@@ -1,0 +1,38 @@
+Every CDAS-> UB request is going to have the following format:
+
+Preamble(n),
+L,type,Id(2),# of mess,ignored(4),
+Dest,
+nst,
+st1(2),
+st2(2),
+...
+(length,compl/slice,type,mess/version) - 4 bytes in total
+part of the message itself
+CRC(4),
+ETX(1=0xFF).
+
+Therefore, it follows almost the same structure as the UB->CDAS communication
+data stream, but it has a small modification due to "Destination" and station
+list.
+
+The COMMS type is "D"(0x44) and the type of the T3 request is 0x07.
+
+The message of the T3 request would follow:
+
+IdT3 (2 bytes)
+second (4 bytes - most significant byte first)
+usecond (4 bytes - the same)
+list of offset and windown (one byte for each one) each pair would be
+for the number of stations.
+
+===========
+The destination, use just the 2 most significant bits which would 
+have one of the following options:
+
+0 -> single (the two bytes which follows the destination byte, is the station Id)
+3 -> broadcast - followed by the message ...
+1 -> station list - (follow 1 byte for the number of stations and stations Id)
+2 -> anti list. - similar to the "1".
+
+

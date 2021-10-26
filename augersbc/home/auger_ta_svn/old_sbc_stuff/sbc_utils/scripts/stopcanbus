@@ -1,0 +1,5 @@
+#!/bin/sh
+
+/sbin/ifconfig can0 down
+/sbin/modprobe -r sja1000_isa
+/sbin/modprobe -r sja1000

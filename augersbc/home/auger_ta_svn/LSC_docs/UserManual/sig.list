@@ -1,0 +1,25 @@
+ 1000 - Msgsvr, Gpsctrl - READ_CONFIG              - Re-read Configuration file
+ 3000 - All          - RESET_VERBOSE            - Reset Verbosity Level
+ 3001 - All          - INCREMENT_VERBOSE        - Increment Verbosity Level
+ 3002 - All          - DECREMENT_VERBOSE        - Decrement Verbosity Level
+ 3010 - All          - MEMLIB_STATUS_LOG        - Log Memory Usage
+ 3011 - All          - MEMLIB_STATUS_MSG        - ??
+ 2000 - Calmonsvr    - MONIT_SEND               - Send Monitoring block
+10000 - All          - PPS_SIGNAL_READY         - 1PPS occurred (from ppsirq)
+ 4000 - Gpsctrl      - GPSCTRL_GET_SATELLITES   - Get Nb of Satellites
+ 4001 - Gpsctrl      - GPSCTRL_FORCE_OK         - Force OK even if no Antenna
+ 4002 - Gpsctrl      - GPSCTRL_SEND_MREADY      - Send M_READY Msg to CDAS
+ 4003 - Gpsctrl      - GPSCTRL_STATUS_STR       - Send Gps Status Generic Msg
+ 4004 - Gpsctrl      - GPSCTRL_SEND_DATE        - Send Date/time to Radio
+ 4005 - Gpsctrl      - GPSCTRL_SET_DATE         - Set Sytem date/time
+ 1000 - Download     - DOWNLOAD_RESET           - Reset Download status
+12345 - Control      - START_TRIGGER            - Start Triggers
+12346 - Control      - STOP_TRIGGER             - Stop Triggers
+ 5001 - t1fake       - FAKE_T1_MIN              - Minimum (1) Fake T1 / second
+ 5200 - t1fake       - FAKE_T1_MAX              - Maximum (200) Fake T1 / second
+ 6001 - t1fake       - FAKE_RANDOM              - Random Period Fake Triggers
+ 6000 - t1fake       - FAKE_NO_RANDOM           - Fixed Period Fake Triggers
+ 5000 - t1read, grbread - SHOW_NBEVT               - List current nb of T1/Grb
+ 1001 - ppsirq       - PPS_SEM_ENABLE           - Enable RT semaphore for grbread
+  666 - mufill       - SAVE_CALIB               - Save Calibration to files
+  777 - mufill       - START_MUONRUN            - Start a Muon Run (save data to file)

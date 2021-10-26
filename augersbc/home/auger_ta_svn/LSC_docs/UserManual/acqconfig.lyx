@@ -1,0 +1,210 @@
+#LyX 1.6.5 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Subsection*
+How to generate long data streams
+\end_layout
+
+\begin_layout Standard
+It is possible to fill almost completely the data streams from LS to CDAS
+ with T2 messages.
+ It's a bit tricky but works.
+ To do that one should modify 2 parameters in the acquisition configuration
+ file
+\end_layout
+
+\begin_layout Itemize
+The T2 algorithm: up to now, 4 T2 algorithms are defined:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+T2_STANDARD_ALGO: compute qualiy of T1, 
+\color red
+not yet implemented
+\color inherit
+.
+\end_layout
+
+\begin_layout Itemize
+T2_LED_ALGO: keep only LED triggers, 
+\color red
+not yet implemented
+\color inherit
+.
+\end_layout
+
+\begin_layout Itemize
+T2_RANDOM_ALGO: generate 20% randomly (used for fakes T1).
+\end_layout
+
+\begin_layout Itemize
+T2_ALL_ALGO: keep all T1's as T2 up to MAX_T2_RATE
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+MAX_T2_RATE: the maximum number of timestamps in one T2 message.
+ By default it is set at 40.
+\end_layout
+
+\begin_layout Standard
+By setting the T2 algo at T2_ALL_ALGO (4), at a T1 rate of 100 Hz, 100 T2
+ are generated.
+ On should then adjust the MAX_T2_RATE in order to fill the 288 bytes of
+ a pkt sent to CDAS; in one pkt, with only one message, there is an offset
+ of 12 bytes (frame header + message header), plus the GPS second (4 bytes);
+ that leaves 272 bytes for the time stamps.
+\end_layout
+
+\begin_layout Standard
+Thus the maximum of timestamps is 272/3 = 90.
+ The good value however is 89, because in addition to the time stamps, on
+ additional 24 bytes value is added as the Gamma Ray Burst counter (fake
+ for the moment, but ...).
+\end_layout
+
+\begin_layout Standard
+Thus, to set the proper values:
+\end_layout
+
+\begin_layout Enumerate
+Log into the LSC (root, root)
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+cd /ram0
+\end_layout
+
+\begin_layout Enumerate
+Change the acquisition configuration file (
+\series bold
+a2
+\series default
+ means T2 algo, 
+\series bold
+mx2
+\series default
+ means MAX_T2_RATE, see section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Acqconfig"
+
+\end_inset
+
+ ):
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\family typewriter
+acqconfig a2=4 mx2=89
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Restart acquisition: 
+\family typewriter
+das restart
+\end_layout
+
+\begin_layout Enumerate
+Restart triggering: 
+\family typewriter
+stop -12345 control
+\end_layout
+
+\begin_layout Description
+Note In this case, there is no more room available to send any other message.
+ Monitoring messages (sent every 5 minutes) shall never arrive to CDAS,
+ as T2 have the highest priority.
+\end_layout
+
+\begin_layout Description
+Note After a reboot or power on, the acquisition configuration is taken
+ from /root/LSC/config.
+ Thus it is necessary to repeat the procedure.
+ Going back to the normal behaviour, use
+\end_layout
+
+\begin_layout Description
+
+\family typewriter
+\series medium
+acqconfig 
+\series default
+a2=3 mx2=40
+\family default
+ (random trigger, maximum t2 rate 40)
+\end_layout
+
+\begin_layout Description
+Note In ordre to make this 
+\begin_inset Quotes eld
+\end_inset
+
+permanent
+\begin_inset Quotes erd
+\end_inset
+
+, the file 
+\series bold
+/root/LSC/bin/svrstart
+\series default
+ should be modified as follows:
+\end_layout
+
+\begin_layout Itemize
+Before the line '
+\family typewriter
+/root/LSC/bin/srv -v start
+\family default
+' insert '
+\family typewriter
+/root/LSC/bin/acqconfig a2=4 mx2=89'
+\end_layout
+
+\end_body
+\end_document

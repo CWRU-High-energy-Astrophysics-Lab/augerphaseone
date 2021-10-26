@@ -1,0 +1,15 @@
+[I]csradio(1291) 1475767110  : Logfile 'csradio.log' Created - Thu Oct  6 15:18:30 2016
+[I]csradio(1291) 1475767110  : Initializing - Thu Oct  6 15:18:30 2016
+[I]csradio(1291) 1475767110  : Version 'csradio - V1.0
+$Author: guglielmi $ - $Revision: 1581 $ - $Date:: 2011-09-29 15:#$'
+[I]csradio(1291) 1475767110  : CsSocket: 3
+[I]csradio(1291) 1475767110  : Host Name: augersbc
+[I]csradio(1291) 1475767110  : Setsockopt: 0
+[I]csradio(1291) 1475767110  : Socket bound - CdasPort: 20900
+[I]csradio(1291) 1475767110  : CsSocket Created : 3
+[I]csradio(1291) 1475767110  : CanSocket Created : 4
+[I]csradio(1291) 1475767110  : Msg Queue: 'csradio'
+[I]csradio(1291) 1475767110  : Initialized
+[I]csradio(1291) 1475767110  : Waiting Cs Connection
+[I]csradio(1291) 1475767126  : Concentrator Connected
+[W]csradio(1291) 1475784899  : Concentrator Disconnected

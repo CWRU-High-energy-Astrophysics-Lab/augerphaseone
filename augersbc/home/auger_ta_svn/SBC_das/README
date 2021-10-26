@@ -1,0 +1,193 @@
+BASIC USER GUIDE FOR AUGER SBC OPERATION
+
+=========================================
+
+Sean Quinn
+spq@case.edu
+Sep 24 2016
+
+=========================================
+
+*Intro*
+
+This document provides essential information about
+hardware used by this machine as well as basic
+features of the programs and services used to
+collect data from Auger SD stations deployed at
+the Telescope Array (TA) cental laser facility (CLF).
+
+=========================================
+HARDWARE
+
+Base system: Raspberry Pi 2 B v1.1
+
+Tech specs
+
+SoC: Broadcom BCM2837 Arm7
+CPU: 700 MHz quad-core ARM Cortex A7 (ARMv7 instruction set)
+RAM: 1 GB SDRAM (shared with GPU)
+USB 2.0 x4
+10/100 Mbit/s Ethernet (8P8C) USB adapter on the USB hub
+Power ratings: 5 VDC, 800 mA (4.0 W)
+Dimensions: 85.60 mm × 56.5 mm (3.370 in × 2.224 in)
+Weight: 45 g (1.6 oz)
+Storage: 8 GB SanDisk microSDHC UHS-I microSD card (full root partition)
+
+40 GPIO PERIPHERALS
+
+UPS PIco - Uninterruptible Power Supply & I2C Control HAT (v1.0)
+See: https://www.modmypi.com/raspberry-pi/breakout-boards/pi-modules/ups-pico
+
+Canberry CANbus for Raspberry Pi (v2.1.2)
+See: http://www.industrialberry.com/canberrydual-v2-1/
+
+USB PERIPHERALS
+
+3x USB-RS232 Adapter
+	2x Trendnet TU-S9 (Prolific 2303)
+	1x FTDI FT232R
+
+1x 128 GB Sandisk cruzer USB thumb drive
+
+=========================================
+OPERATING SYSTEM
+
+Raspbian Jessie
+Release date 2016-05-27
+Version: May 2016
+Permanent link: https://downloads.raspberrypi.org/raspbian/images/raspbian-2016-05-31/
+Kernel version: 4.4.13-v7+ #894 SMP Mon Jun 13 13:13:27 BST 2016 armv7l GNU/Linux
+
+=========================================
+SERIAL DEVICE CONFIGURATIONS
+
+To determine the device numbers first look at /var/log/kern.log after
+the system has booted. Separating the TA global trigger from the rest
+is easy, as it's a different manufacturer. Distinguishing the Auger South
+device from the TICTAC device might take some trial and error. There is only
+one permutation to check of course: set the speed of one device and look
+at the output. If nothing appears then it's the other Trendnet device you want.
+
+1x TU-S9 for TA SD. Used for local trigger.
+115200 8n1
+
+1x TU-S9 for Auger South SD
+38400 8n1
+
+1x FTDI for TA global
+115200 8n1
+
+A text file containing full configurations is available in
+auger_ta_svn/SBC_das/configs/ttyUSBX.txt
+
+In this folder there are also two scripts for TA global and Auger South.
+These require a few extra options since it's possible to send
+in addition to receive. For the local trigger there is no physical
+connection to the TX pins, so this isn't a concern.
+
+=========================================
+CANBUS DEVICE CONFIGRUATIONS
+
+The machine is already setup to send and receive CAN messages. The Linux
+kernel has all the necessary (and fortunately stable) socketcan drivers
+built in.
+
+To setup a CAN interface use
+sudo /sbin/ip link set can0 up type can bitrate 125000
+
+or use this command on the script in /home/pi
+
+sudo ./open_can.sh
+
+If a new machine needs to be installed the following config is necessary
+for the current version of Raspbian
+
+These edits should go at the end of the /boot/config.txt file
+
+dtparam=spi=on
+dtoverlay=mcp2515-can0,oscillator=16000000,interrupt=22
+dtoverlay=spi-bcm2835-overlay
+
+=========================================
+AUGER SOUTH DATA ACQUISITION
+
+This station is monitored and read out over a serial line. This is quite
+different than the usual radio control and read out used in Argentina.
+To operate in DAQ mode the local station (LS) requires a constant link
+with the Auger central data acquisition system, which is done wirelessly
+using a custom transmission protocol. In our setup we have a software
+package written by Ricardo Sato and Fernando Contreras that emulates
+CDAS functions. Using this we're able to receive local trigger and monitoring
+data in real time, and also execute OS9 commands on the LS.
+
+For organizational purposes it's best to copy the executables to an
+external drive and run the programs from the folders where they'll save data.
+
+Assuming a physical link has been established, and the correct serial
+device has been identified on the SBC, begin by starting up the emulator,
+pointing it to the serial port for send and receive, and then saving log
+data to a file.
+
+./cdas_su_emu /dev/ttyUSB0 /dev/ttyUSB0 3000 >> su_log.txt &
+
+Append is used so that this file can be truncated everyday using > su_log.txt
+and prevents zero bits from being dumped into the new file by the OS.
+
+A new file called T2_list.out will be created. If the LS is already in
+a "ready" state, then DAQ will start automatically and T2_list.out will
+be populated with T2 timestamps. At this point the parse_auger_south.py
+program should be started
+
+python parse_auger_south.py &
+
+This program blocks on data written to T2_list.out and then writes it in an
+easier to use format for comparing timestamps to other detectors.
+
+=========================================
+AUGER NORTH DATA ACQUISITION
+
+This station is monitored and read out over a CAN line. This is an entirely
+different protocol from that used in Argentina and one of it's advantages is
+higher data throughput of 125000 bits/s (compared to 38400). These stations
+also would normally be controlled and read out wirelessly, but at the TA CLF
+this is not required since we have a CAT5e connection. To emulate CDAS
+behavior Laurent Guglielmi et al. have developed the LSC_das software package.
+This emulates the CAN radio protocol and handles monitoring and readout.
+
+First, it's recommended that the LSC_das binary executables be moved
+to the folder where data will be generated and stored. This helps with
+organization and also prevents unnecessary files being included in the svn
+repo.
+
+Next start up the main program which handles emulation. This program expects
+the CANbus device to be present under can0 in the network interfaces.
+
+./csradio &
+
+Assuming execution went well, you should see some stdout messages:
+
+[1] 23932
+Pid: 23932
+CS socket created: 3
+CAN socket created: 4
+Waiting Cs Connection
+
+Next start up the concentrator program which interfaces between csradio 
+and the postmaster (pm).
+
+./cs &
+
+Next start the parse_auger_north.py program. This starts pm as a subprocess
+and also handles reading and parsing the T2 information normally sent to
+stdout by pm. T2 timestamps are stored in an easy to read format 
+
+python parse_auger_north.py &
+
+You should see "Concentrator Connected" and perhaps "Can't send CAN frame !"
+in stdout. This means things are working.
+
+=========================================
+TELESCOPE ARRAY GLOBAL TRIGGER DATA ACQUISITION
+
+
+
